@@ -94,6 +94,80 @@
         #top{
             background-color: theme-color(green);
             color: theme-color(white);
+
+            h1{
+                color: theme-color(blue);
+            }
+        }
+
+        #bills{
+            padding-bottom: 0;
+
+            .all-bills{
+                border-top: 1px solid theme-color(blue);
+                padding-top: $grid-gutter / 2;
+                margin-top: $grid-gutter / 2;
+            }
+
+            .bill-block{
+                padding-bottom: $grid-gutter / 2;
+                margin-bottom: $grid-gutter / 2;
+                border-bottom: 1px solid theme-color(blue);
+
+                &:last-child{
+                    border-bottom: 0;
+                }
+
+                &.active{
+                    .content{
+                        display: block;
+                    }
+                    .toggle{
+                        &:after{
+                            content: '-';
+                        }
+                    }
+                }
+
+                header{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+
+                    p{
+                        font-size: .9em;
+                        margin-bottom: 5px;
+                    }
+
+                    h3{
+                        font-family: $maison;
+                        text-transform: none;
+                        font-size: 1.2em;
+                    }
+
+                    &:hover{
+                        .toggle{
+                            color: theme-color(green);
+                        }    
+                    }
+
+                    .toggle{
+                        color: theme-color(blue);
+                        transition: .25s;
+                        font-size: 30px;
+
+                        &:after{
+                            content: '+';
+                        }
+                    }
+                }
+
+                .content{
+                    display: none;
+                    padding-top: $grid-gutter / 2;
+                }
+            }
         }
 
         #federal{

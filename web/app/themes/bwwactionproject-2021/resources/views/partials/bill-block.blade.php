@@ -1,12 +1,19 @@
-<div class="campaign-block">
-    <div class="wrap">
-        <div class="image">
-            {!! the_post_thumbnail('medium') !!}
-        </div>
+<div class="bill-block">
+    <header>
         <div class="text">
-            <h3>{{ the_title() }}</h3>
-            {{ the_excerpt() }}
-            <a href="{{ the_permalink() }}" class="button">Learn More</a>
+            <p>{{ the_title() }}</p>
+            <h3>{{ the_field('full_title') }}</h3>
+        </div>
+        <div class="toggle"></div>
+    </header>
+    <div class="content">
+        <div class="row">
+            <div class="col-md-6">
+                {!! the_post_thumbnail('large') !!}
+            </div>
+            <div class="col-md-6">
+                {{ the_content() }}
+            </div>
         </div>
     </div>
 </div>

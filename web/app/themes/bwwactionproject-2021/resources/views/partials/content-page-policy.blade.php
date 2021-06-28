@@ -1,7 +1,13 @@
 <section id="top">
     <div class="container">
-        <h1>{{ the_title() }}</h1>
-        @php the_content() @endphp
+        <div class="row">
+            <div class="col-md-6">
+                <h1>{{ the_title() }}</h1>
+                @php the_content() @endphp
+            </div>
+            <div class="col-md-6">
+                {!! the_post_thumbnail('medium') !!}
+            </div>
     </div>
 </section>
 
@@ -10,14 +16,12 @@
         <h2>{{ $data['bills']['title'] }}</h2>
         <p>{{ $data['bills']['introduction'] }}</p>
         <div class="all-bills">
-            <div class="row">
                 @php global $post @endphp
                 @foreach ($bills as $post)
                     @php setup_postdata($post) @endphp
                     @include('partials.bill-block')
                     @php wp_reset_postdata() @endphp
                 @endforeach
-            </div>
         </div>
     </div>
 </section>
