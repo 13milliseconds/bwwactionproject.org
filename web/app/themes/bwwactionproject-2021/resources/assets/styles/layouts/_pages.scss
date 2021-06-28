@@ -91,6 +91,12 @@
     &.policy{
         background-color: white;
 
+        h3{
+            font-family: $maison;
+            text-transform: none;
+            font-size: 1.2em;
+        }
+
         #top{
             background-color: theme-color(green);
             color: theme-color(white);
@@ -138,12 +144,6 @@
                     p{
                         font-size: .9em;
                         margin-bottom: 5px;
-                    }
-
-                    h3{
-                        font-family: $maison;
-                        text-transform: none;
-                        font-size: 1.2em;
                     }
 
                     &:hover{
