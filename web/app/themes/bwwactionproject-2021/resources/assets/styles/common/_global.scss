@@ -1,6 +1,14 @@
 body{
     background-color: theme-color(white);
     color: theme-color(blue);
+
+    main.main{
+        min-height: 100vh;
+
+        .page-header{
+            padding-top: 200px;
+        }
+    }
 }
 
 h1, h2, h3{
@@ -16,6 +24,7 @@ a{
     &.button{
         background-color: theme-color(gold);
         color: theme-color(blue);
+        font-size: .8em;
         text-transform: uppercase;
         padding: 10px 20px;
         border-radius: 20px;

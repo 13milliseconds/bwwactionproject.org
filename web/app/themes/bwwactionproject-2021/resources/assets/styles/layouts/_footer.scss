@@ -2,4 +2,13 @@ footer.content-info{
     background-color: theme-color(blue);
     color: theme-color(white);
     padding: $grid-gutter 0;
+
+    ul{
+        padding-left: 0;
+        list-style: none;
+
+        a{
+            color: theme-color(white);
+        }
+    }
 }

@@ -130,3 +130,8 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+// Add Theme Options Page
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();	
+}

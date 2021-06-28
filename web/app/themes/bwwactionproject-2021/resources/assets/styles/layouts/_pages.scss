@@ -36,4 +36,57 @@
             text-align: center;
         }
     }
+
+    // CAMPAIGNS
+    &.campaigns{
+        #top{
+            background-color: theme-color(gold);
+            text-align: center;
+            padding-bottom: 200px;
+            margin-bottom: -100px;
+        }
+
+        #campaigns{
+            padding-top: 0;
+        }
+
+        .campaign-block{
+            @extend .col-md-4;
+            padding: $grid-gutter;
+            margin-bottom: $grid-gutter;
+            background: white;
+            
+            &:first-child{
+                @extend .col-md-12;
+                background: theme-color(blue);
+                color: theme-color(white);
+            }
+        }
+    }
+
+    // POLICY
+    &.policy{
+        background-color: white;
+
+        #top{
+            background-color: theme-color(green);
+            color: theme-color(white);
+        }
+
+        #federal{
+            h2{
+                border-bottom: 1px solid theme-color(blue);
+            }
+            
+            .fed-bill-block{
+                border-bottom: 1px solid theme-color(blue);
+                padding: $grid-gutter 0;
+                margin-bottom: $grid-gutter;
+
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
 }
