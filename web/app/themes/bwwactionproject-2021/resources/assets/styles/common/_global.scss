@@ -1,6 +1,7 @@
 body{
     background-color: theme-color(white);
     color: theme-color(blue);
+    font-family: 'MaisonNeue', Arial, Helvetica, sans-serif;
 
     main.main{
         min-height: 100vh;
@@ -12,8 +13,14 @@ body{
 }
 
 h1, h2, h3{
-    font-weight: 600;
     text-transform: uppercase;
+    font-family: 'VTC-Martin', sans-serif;
+    letter-spacing: .05em;
+}
+
+h1{
+    font-size: 3em;
+    line-height: 1em;
 }
 
 h2{

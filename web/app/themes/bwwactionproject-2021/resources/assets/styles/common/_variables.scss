@@ -15,3 +15,21 @@ $grid-gutter: 50px;
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+@font-face {
+  font-family: 'VTC-Martin';
+  src: url('../fonts/VTC-Martin-Regular.woff2') format('woff2'),
+      url('../fonts/VTC-Martin-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('../fonts/MaisonNeue-book.woff2') format('woff2'),
+      url('../fonts/MaisonNeue-book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

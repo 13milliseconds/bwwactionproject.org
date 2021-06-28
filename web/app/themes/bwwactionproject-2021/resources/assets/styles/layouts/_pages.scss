@@ -89,4 +89,54 @@
             }
         }
     }
+
+    &.about{
+        #top{
+            background-color: theme-color(blue);
+            color: theme-color(white);
+            padding-bottom: 0;
+
+            h1{
+                text-align: center;
+                margin-bottom: $grid-gutter;
+
+                strong{
+                    color: theme-color(gold);
+                    display: block;
+                }
+            }
+
+            .wrap{
+                display: flex;
+
+                .text{
+                    flex: 1;
+                    z-index: 2;
+
+                    p{
+                        padding-right: $grid-gutter * 2;
+                        padding-left: $grid-gutter /2;
+                        
+                        &:first-child{
+                            @extend h1;
+                            text-align: left;
+                            padding: $grid-gutter / 2;
+                            background-color: theme-color(green);
+                            color: theme-color(white);
+                            margin-bottom: 1em;
+                        }
+                    }
+                }
+
+                .image{
+                    flex: 1;
+                    margin-left: -$grid-gutter;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
