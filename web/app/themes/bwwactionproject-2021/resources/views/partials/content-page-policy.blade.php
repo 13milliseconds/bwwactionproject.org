@@ -11,6 +11,7 @@
         <p>{{ $data['bills']['introduction'] }}</p>
         <div class="all-bills">
             <div class="row">
+                @php global $post @endphp
                 @foreach ($bills as $post)
                     @php setup_postdata($post) @endphp
                     @include('partials.bill-block')
