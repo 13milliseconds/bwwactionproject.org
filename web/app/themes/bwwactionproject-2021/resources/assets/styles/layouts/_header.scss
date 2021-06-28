@@ -1,7 +1,33 @@
-.banner .nav li {
-  @extend .nav-item;
-}
+.banner{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: $grid-gutter / 2 $grid-gutter;
 
-.banner .nav a {
-  @extend .nav-link;
+  .nav{
+    li {
+      @extend .nav-item;
+
+      &:last-child{
+        padding-left: .5em;
+
+        a{
+          background-color: theme-color(blue);
+          padding: 5px 20px;
+          border-radius: 20px;
+        }
+      }
+    }
+  
+    a {
+      @extend .nav-link;
+      color: theme-color(white);
+      text-transform: uppercase;
+      font-size: .8em;
+    }
+  } 
 }
