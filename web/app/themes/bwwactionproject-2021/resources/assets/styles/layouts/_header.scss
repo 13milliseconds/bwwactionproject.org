@@ -8,6 +8,12 @@
   justify-content: space-between;
   padding: $grid-gutter / 2 $grid-gutter;
 
+  .brand{
+    img{
+      height: 100px;
+    }
+  }
+
   .nav{
     li {
       @extend .nav-item;

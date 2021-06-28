@@ -44,6 +44,10 @@
             text-align: center;
             padding-bottom: 200px;
             margin-bottom: -100px;
+
+            .container{
+                max-width: 700px;
+            }
         }
 
         #campaigns{
@@ -52,14 +56,33 @@
 
         .campaign-block{
             @extend .col-md-4;
-            padding: $grid-gutter;
             margin-bottom: $grid-gutter;
-            background: white;
+
+            .wrap{
+                background: white;
+            }
             
             &:first-child{
                 @extend .col-md-12;
-                background: theme-color(blue);
-                color: theme-color(white);
+
+                .wrap{
+                    background: theme-color(blue);
+                    color: theme-color(white);
+                }
+            }
+
+            .text{
+                padding: $grid-gutter;
+            }
+
+            .image{
+                overflow: hidden;
+                height: 300px;
+
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
         }
     }
