@@ -19,6 +19,12 @@ $hamburger-layer-spacing       : 4px;
 $hamburger-layer-color: theme-color(white);
 @import "~hamburgers/_sass/hamburgers/hamburgers.scss";
 
+// Import Slick
+$slick-font-path: "~slick-carousel/slick/fonts/";
+$slick-loader-path: "~slick-carousel/slick/";
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+
 /** Import theme styles */
 @import "common/global";
 @import "components/buttons";

@@ -66,7 +66,7 @@
 <section id="latest">
     <div class="container">
         <h2>Latest News</h2>
-        <div class="row">
+        <div class="row post-group">
         @foreach ($posts as $post)
             @php setup_postdata($post) @endphp
             <div class="col-md-4">
