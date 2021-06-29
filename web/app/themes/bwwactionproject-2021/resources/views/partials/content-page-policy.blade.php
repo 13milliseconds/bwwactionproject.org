@@ -6,7 +6,7 @@
                 @php the_content() @endphp
             </div>
             <div class="col-md-6">
-                {!! the_post_thumbnail('medium') !!}
+                {!! the_post_thumbnail('large') !!}
             </div>
     </div>
 </section>

@@ -242,10 +242,14 @@
 
         #campaigns{
             padding-top: 0;
+
+            .container{
+                max-width: 800px;
+            }
         }
 
         .campaign-block{
-            @extend .col-md-4;
+            @extend .col-md-6;
             margin-bottom: $grid-gutter;
 
             .wrap{
@@ -306,6 +310,10 @@
         #top{
             background-color: theme-color(green);
             color: theme-color(white);
+
+            .row{
+                align-items: center;
+            }
 
             h1{
                 color: theme-color(blue);
