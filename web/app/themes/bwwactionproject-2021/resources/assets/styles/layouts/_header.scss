@@ -65,7 +65,7 @@
         padding-left: .5em;
 
         a{
-          background-color: theme-color(blue);
+          background-color: theme-color(gold);
           padding: 5px 20px;
           border-radius: 20px;
         }
@@ -80,7 +80,7 @@
   } 
 
   @include media-breakpoint-up(md){
-    padding: $grid-gutter / 2 $grid-gutter;
+    padding: 10px $grid-gutter;
 
     .brand{
       img{
@@ -100,7 +100,7 @@
       height: auto;
 
       .nav{
-        height: 50px;
+        height: 70px;
         opacity: 1;
         transform: unset;
         flex-flow: row;
@@ -108,6 +108,7 @@
 
         li{
           font-size: .8em;
+          margin-bottom: 0;
         }
       }
     }
@@ -116,7 +117,7 @@
   
       .brand{
         img{
-          height: 50px;
+          height: 70px;
         }
       }
     }

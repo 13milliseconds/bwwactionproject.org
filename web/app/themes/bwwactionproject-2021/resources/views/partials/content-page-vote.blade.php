@@ -47,7 +47,7 @@
             @foreach ($data['ballot_guides']['guides'] as $guide)
                 <div class="guide">
                     <div class="year">{{ $guide['year'] }}</div>
-                    <a href="{{ $guide['file'] }}" target="_blank">
+                    <a href="{{ $guide['pdf'] }}" target="_blank">
                         <img src="{{ $guide['thumbnail']['sizes']['medium'] }}" />
                     </a>
                 </div>

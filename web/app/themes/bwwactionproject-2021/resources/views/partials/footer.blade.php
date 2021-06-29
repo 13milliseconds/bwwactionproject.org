@@ -2,8 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <p>{{ the_field('full_name', 'option') }}</p>
-        <p>&copy;{{ date( 'Y' ) }} {{ get_bloginfo( 'name' ) }}</p>
+        <a class="brand" href="{{ home_url('/') }}">
+          <img src="@asset('images/bwwap-logo-500.png')" />
+        </a>
+        <p class="copyright">&copy;{{ date( 'Y' ) }} {{ the_field('full_name', 'option') }}</p>
       </div>
       <div class="col-md-4">
         <h3>Get In Touch</h3>

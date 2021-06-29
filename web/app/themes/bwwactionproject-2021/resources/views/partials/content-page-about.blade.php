@@ -6,7 +6,7 @@
                 {!! $data['header']['text'] !!}
             </div>
             <div class="image">
-                <img src="{{ $data['header']['image']['sizes']['medium'] }}"/>
+                {!! the_post_thumbnail('large') !!}
             </div>
         </div>
     </div>

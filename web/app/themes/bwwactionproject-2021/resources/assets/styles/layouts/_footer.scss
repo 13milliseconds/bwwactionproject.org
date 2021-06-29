@@ -3,9 +3,34 @@ footer.content-info{
     color: theme-color(white);
     padding: $grid-gutter 0;
     text-align: center;
+    position: relative;
 
+    img{
+        width: 200px;
+    }
+
+    .copyright{
+        margin-top: $grid-gutter / 2;
+        font-size: .8em;
+        position: absolute;
+        bottom: $grid-gutter / 2;
+        left: 0;
+        width: 100%;
+
+        @include media-breakpoint-up(md){
+            position: inherit;
+            bottom: auto;
+        }
+    }
+    
     .col-md-4{
         margin-bottom: $grid-gutter /2;
+        position: initial;
+        
+        @include media-breakpoint-up(md){
+            margin-bottom: 0;
+            position: relative;
+        }
     }
 
     h3{
@@ -13,13 +38,17 @@ footer.content-info{
         font-size: 1.5em;
     }
 
+    a{
+        color: theme-color(white);
+        
+        &:hover{
+            color: theme-color(gold);
+        }
+    }
+
     ul{
         padding-left: 0;
         list-style: none;
-
-        a{
-            color: theme-color(white);
-        }
     }
 
     @include media-breakpoint-up(md){
