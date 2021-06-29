@@ -66,6 +66,12 @@
                 font-size: 3em;
             }
 
+            h3{
+                @extend h2;
+                color: theme-color(blue);
+                font-size: 2em;
+            }
+
             .wp-block-columns{
                 margin-top: $grid-gutter * 2;
                 text-align: left;

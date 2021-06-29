@@ -10,6 +10,7 @@
         {!! the_field('contact_information', 'option') !!}
       </div>
       <div class="col-md-4">
+        <h3>Follow Us</h3>
         <ul>
         @php $links = get_field('social_links', 'option') @endphp
         @foreach ($links as $link)
