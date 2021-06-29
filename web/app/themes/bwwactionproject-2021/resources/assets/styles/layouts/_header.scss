@@ -76,7 +76,6 @@
       @extend .nav-link;
       color: theme-color(white);
       text-transform: uppercase;
-      font-size: .8em;
     }
   } 
 
@@ -93,8 +92,24 @@
       display: none;
     }
 
-    .nav{
-      height: 50px;
+    .nav-primary{
+      display: block;
+      position: relative;
+      background: transparent;
+      width: auto;
+      height: auto;
+
+      .nav{
+        height: 50px;
+        opacity: 1;
+        transform: unset;
+        flex-flow: row;
+        justify-content: flex-end;
+
+        li{
+          font-size: .8em;
+        }
+      }
     }
 
     &.scrolled{

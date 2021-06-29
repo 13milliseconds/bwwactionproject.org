@@ -71,6 +71,7 @@
                     left: 10%;
                     max-width: 40%;
                     top: 150px;
+                    transform: unset;
 
                     h1{
                         font-size: 3em;
@@ -85,12 +86,14 @@
                     img{
                         bottom: 0;
                         left: 0;
+                        top: auto;
                         width: 55%;
                         transform: translateY($grid-gutter);
                         
                         &:last-child{
                             left: auto;
                             right: 0;
+                            width: 55%;
                             transform: translateY(10px);
                         }
                     }
