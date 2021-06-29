@@ -1,15 +1,22 @@
 <article @php post_class() @endphp>
-  <div class="container">
   <header>
-    <h1 class="entry-title">{!! get_the_title() !!}</h1>
-    @include('partials/entry-meta')
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="category">{{ get_the_category()[0]->name }}</div>
+          <h1 class="entry-title">{!! get_the_title() !!}</h1>
+          {!! the_excerpt() !!}
+        </div>
+        <div class="col-md-6">
+          {!! the_post_thumbnail('large') !!}
+        </div>
+      </div>
+    </div>
   </header>
-  <div class="entry-content">
+  
+  <section class="entry-content">
+    <div class="container">
     @php the_content() @endphp
-  </div>
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
-  @php comments_template('/partials/comments.blade.php') @endphp
-  </div>
+    </div>
+  </section>
 </article>
