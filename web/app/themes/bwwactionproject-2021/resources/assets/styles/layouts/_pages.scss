@@ -110,6 +110,40 @@
                 max-width: 500px;
             }
         }
+
+        #latest{
+            h2{
+                margin-bottom: $grid-gutter;
+            }
+            
+            .post-block{
+                .image{
+                    height: 200px;
+                    overflow: hidden;
+                    margin-bottom: $grid-gutter / 2;
+
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .category{
+                    font-size: .9em;
+                    text-transform: uppercase;
+                }
+
+                h3{
+                    font-family: $maison;
+                    font-size: 1.2em;
+                    text-transform: none;
+                }
+
+                p{
+                    margin-bottom: $grid-gutter / 2;
+                }
+            }
+        }
     }
 
     // CAMPAIGNS

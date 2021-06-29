@@ -7,11 +7,13 @@
 
 <section id="campaigns">
     <div class="container">
+        <div class="row">
         @php global $post @endphp
         @foreach ($campaigns as $post)
             @php setup_postdata($post) @endphp
             @include('partials.campaign-block')
             @php wp_reset_postdata() @endphp
         @endforeach
+        </div>
     </div>
 </section>

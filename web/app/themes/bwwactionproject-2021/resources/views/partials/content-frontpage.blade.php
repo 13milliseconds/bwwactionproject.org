@@ -31,7 +31,7 @@
     </div>
 </section>
 
-{{-- @if($data['feature']) --}}
+@if($data['feature'])
 <section id="feature">
     <div class="container">
         <div class="row">
@@ -53,7 +53,7 @@
         </div>
     </div>
 </section>
-{{-- @endif --}}
+@endif
 
 <section id="newsletter">
     <div class="container">
@@ -66,6 +66,14 @@
 <section id="latest">
     <div class="container">
         <h2>Latest News</h2>
-        the last posts
+        <div class="row">
+        @foreach ($posts as $post)
+            @php setup_postdata($post) @endphp
+            <div class="col-md-4">
+                @include('partials.post-block')
+            </div>
+            @php wp_reset_postdata() @endphp 
+        @endforeach
+        </div>
     </div>
 </section>
