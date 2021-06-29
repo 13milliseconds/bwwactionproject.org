@@ -310,6 +310,12 @@
                 }
             }
         }
+
+        #content{
+            img{
+                margin-bottom: $grid-gutter;
+            }
+        }
     }
 
     &.vote{

@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="{{ $data['left_column']['image']['sizes']['medium'] }}"/>
+                <img src="{{ $data['left_column']['image']['sizes']['large'] }}"/>
                 {!! $data['left_column']['text'] !!}
             </div>
             <div class="col-md-6">
