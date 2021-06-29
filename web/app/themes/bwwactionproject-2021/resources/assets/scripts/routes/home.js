@@ -2,7 +2,9 @@ export default {
   init() {
     // JavaScript to be fired on the home page
 
-    $('.post-group').slick({
+    let postGroup = $('.post-group');
+
+    postGroup.slick({
       arrows: false,
       dots: false,
       slidesToShow: 1,
@@ -12,7 +14,7 @@ export default {
       responsive:
         [
           {
-            breakpoint: 9999,
+            breakpoint: 5000,
             settings: 'unslick',
           }, {
             breakpoint: 768,

@@ -201,6 +201,8 @@
             }
 
             .post-block{
+                margin-bottom: $grid-gutter;
+
                 .image{
                     height: 200px;
                     overflow: hidden;
