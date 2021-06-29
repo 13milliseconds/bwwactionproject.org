@@ -1,9 +1,17 @@
 .page{
     section{
-        padding: 100px 0;
+        padding: $grid-gutter 0;
 
         &:first-child{
-            padding-top: 200px;
+            padding-top: 100px;
+        }
+
+        @include media-breakpoint-up(md){
+            padding: 100px 0;
+
+            &:first-child{
+                padding-top: 200px;
+            }   
         }
     }
 
@@ -12,17 +20,19 @@
         #top{
             background-color: theme-color(green);
             padding-bottom: 0;
-            height: 600px;
+            height: 90vh;
             display: flex;
             align-items: flex-end;
+            overflow: hidden;
+            position: relative;
             
             .text{
-                padding: $grid-gutter;
-                left: 10%;
-                max-width: 40%;
+                padding: $grid-gutter / 2;
                 position: absolute;
-                top: 150px;
                 z-index: 2;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
 
                 h1{
                     background-color: theme-color(gold);
@@ -30,40 +40,71 @@
                     padding: 2px 20px;
                     display: inline;
                     line-height: 1.3em;
+                    font-size: 2.1em;
                 }
             }
 
             .images{
-                position: relative;
-                max-width: 700px;
-                margin: auto;
-                
                 img{
                     z-index: 0;
                     position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 55%;
-                    transform: translateY($grid-gutter);
+                    top: 100px;
+                    left: 5%;
+                    width: 90%;
                     
                     &:last-child{
-                        left: auto;
-                        right: 0;
+                        top: auto;
+                        bottom: 0;
+                        left: 10%;
+                        width: 60%;
                         transform: translateY(10px);
+                    }
+                }
+            }
+
+            @include media-breakpoint-up(md){
+                height: 600px;
+                overflow: visible;
+
+                .text{
+                    padding: $grid-gutter;
+                    left: 10%;
+                    max-width: 40%;
+                    top: 150px;
+
+                    h1{
+                        font-size: 3em;
+                    }
+                }
+
+                .images{
+                    position: relative;
+                    max-width: 700px;
+                    margin: auto;
+                    
+                    img{
+                        bottom: 0;
+                        left: 0;
+                        width: 55%;
+                        transform: translateY($grid-gutter);
+                        
+                        &:last-child{
+                            left: auto;
+                            right: 0;
+                            transform: translateY(10px);
+                        }
                     }
                 }
             }
         }
 
         #content{
-            text-align: center;
             .container{
                 max-width: 800px;
             }
 
             h2{
                 color: theme-color(green);
-                font-size: 3em;
             }
 
             h3{
@@ -75,6 +116,18 @@
             .wp-block-columns{
                 margin-top: $grid-gutter * 2;
                 text-align: left;
+
+                .wp-block-column{
+                    margin-bottom: $grid-gutter;
+                }
+            }
+
+            @include media-breakpoint-up(md){
+                text-align: center;
+
+                h2{
+                    font-size: 3em;
+                }
             }
         }
 
@@ -92,6 +145,11 @@
             img{
                 box-shadow: -10px 10px 0px 0px theme-color(blue);
             }
+
+            .text{
+                padding-top: $grid-gutter;
+                padding-bottom: $grid-gutter;
+            }
         }
         
         #donate{
@@ -103,8 +161,15 @@
                 align-items: center;
             }
 
-            img{
-                max-width: 400px;
+            .text{
+                padding-top: $grid-gutter;
+                padding-bottom: $grid-gutter;
+            }
+
+            @include media-breakpoint-up(md){
+                img{
+                    max-width: 400px;
+                }
             }
         }
         
@@ -192,22 +257,34 @@
                     color: theme-color(white);
                 }
 
-                .image{
-                    height: 500px;
+                @include media-breakpoint-up(md){
+                    .image{
+                        height: 500px;
+                    }
                 }
             }
 
             .text{
-                padding: $grid-gutter;
+                padding: $grid-gutter / 2;
             }
 
             .image{
                 overflow: hidden;
-                height: 300px;
+                height: 200px;
 
                 img{
                     width: 100%;
                     object-fit: cover;
+                }
+            }
+
+            @include media-breakpoint-up(md){
+                .text{
+                    padding: $grid-gutter;
+                }
+
+                .image{
+                    height: 300px;
                 }
             }
         }
@@ -293,6 +370,10 @@
                     display: none;
                     padding-top: $grid-gutter / 2;
                 }
+
+                img{
+                    margin-bottom: $grid-gutter / 2;
+                }
             }
         }
 
@@ -330,33 +411,53 @@
             }
 
             .wrap{
-                display: flex;
-
                 .text{
-                    flex: 1;
-                    z-index: 2;
-
                     p{
-                        padding-right: $grid-gutter * 2;
-                        padding-left: $grid-gutter /2;
                         
                         &:first-child{
                             @extend h1;
                             text-align: left;
-                            padding: $grid-gutter / 2;
-                            background-color: theme-color(green);
-                            color: theme-color(white);
+                            color: theme-color(green);
                             margin-bottom: 1em;
+                            font-size: 1.8em;
                         }
                     }
                 }
 
                 .image{
-                    flex: 1;
-                    margin-left: -$grid-gutter;
+                    margin-top: $grid-gutter / 2;
 
                     img{
                         width: 100%;
+                    }
+                }
+            }
+
+            @include media-breakpoint-up(md){
+                .wrap{
+                    display: flex;
+    
+                    .text{
+                        flex: 1;
+                        z-index: 2;
+    
+                        p{
+                            padding-right: $grid-gutter * 2;
+                            padding-left: $grid-gutter /2;
+                            
+                            &:first-child{
+                                padding: $grid-gutter / 2;
+                                background-color: theme-color(green);
+                                color: theme-color(white);
+                                font-size: 3em;
+                            }
+                        }
+                    }
+    
+                    .image{
+                        flex: 1;
+                        margin-left: -$grid-gutter;
+                        margin-top: 0;
                     }
                 }
             }
@@ -388,16 +489,27 @@
         }
 
         #endorsements{
+            .intro{
+                margin-bottom: $grid-gutter;
+            }
+
             .candidate{
-                padding-bottom: $grid-gutter;
-                display: flex;
+                margin-bottom: $grid-gutter;
 
                 .image{
-                    flex: 0 0 150px;
+                    margin-bottom: $grid-gutter / 2;
                 }
 
-                .text{
-                    padding-left: $grid-gutter;
+                @include media-breakpoint-up(md){
+                    display: flex;
+
+                    .image{
+                        flex: 0 0 150px;
+                    }
+
+                    .text{
+                        padding-left: $grid-gutter;
+                    }
                 }
             }
         }

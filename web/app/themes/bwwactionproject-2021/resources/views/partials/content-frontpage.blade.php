@@ -22,7 +22,7 @@
                 <div class="col-md-6">
                     <img src="{{ $data['donate']['image']['sizes']['large'] }}" />
                 </div>
-            <div class="col-md-6">
+            <div class="col-md-6 text">
                 <h2>{{ $data['donate']['title'] }}</h2>
                 <p>{{ $data['donate']['text'] }}</p>
                 <a class="button" href="/donate">{{ $data['donate']['button_text'] }}</a>
@@ -35,7 +35,7 @@
 <section id="feature">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 text">
                 @php 
                 global $post;
                 $post = $data['feature'];
