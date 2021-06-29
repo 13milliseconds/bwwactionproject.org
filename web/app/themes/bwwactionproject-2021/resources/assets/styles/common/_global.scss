@@ -12,7 +12,7 @@ body{
     }
 }
 
-h1, h2, h3{
+h1, h2{
     text-transform: uppercase;
     font-family: 'VTC-Martin', sans-serif;
     letter-spacing: .05em;
@@ -23,11 +23,17 @@ h1{
     line-height: 1em;
 }
 
-h2{
-    
+h3{
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 a{
+    &:hover{
+        text-decoration: none;
+        color: theme-color(green);
+    }
+
     &.button,
     &.wp-block-button__link{
         background-color: theme-color(gold);

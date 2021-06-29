@@ -115,7 +115,7 @@
             h2{
                 margin-bottom: $grid-gutter;
             }
-            
+
             .post-block{
                 .image{
                     height: 200px;
@@ -131,12 +131,18 @@
                 .category{
                     font-size: .9em;
                     text-transform: uppercase;
+                    margin-bottom: 10px;
                 }
 
                 h3{
-                    font-family: $maison;
-                    font-size: 1.2em;
-                    text-transform: none;
+
+                    a{
+                        color: theme-color(blue);
+                        
+                        &:hover{
+                            color: theme-color(green);
+                        }
+                    }
                 }
 
                 p{
@@ -177,6 +183,10 @@
                 .wrap{
                     background: theme-color(blue);
                     color: theme-color(white);
+                }
+
+                .image{
+                    height: 500px;
                 }
             }
 

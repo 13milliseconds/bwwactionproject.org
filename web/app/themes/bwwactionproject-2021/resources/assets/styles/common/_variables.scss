@@ -35,4 +35,13 @@ $navbar-light-toggler-icon-bg: none;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('../fonts/MaisonNeue-bold.woff2') format('woff2'),
+      url('../fonts/MaisonNeue-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 $maison: 'MaisonNeue', Arial, Helvetica, sans-serif;

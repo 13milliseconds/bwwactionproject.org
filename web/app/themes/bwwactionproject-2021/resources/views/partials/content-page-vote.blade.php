@@ -5,7 +5,7 @@
                 <h1>{{ the_title() }}</h1>
             </div>
             <div class="col-md-6">
-                {!! the_post_thumbnail('medium') !!}
+                {!! the_post_thumbnail('large') !!}
             </div>
         </div>
     </div>
