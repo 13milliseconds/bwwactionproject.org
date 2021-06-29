@@ -1,21 +1,27 @@
 <section id="top">
-    <div class="wrap">
-        <h1>{{ $data['top']['mission_statement'] }}</h1>
-    </div>
-</section>
-
-<section id="content">
-    <div class="container">
-        @php the_content() @endphp
-    </div>
-</section>
-
-<section id="donate">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                Image
+        <div class="text">
+            <h1>{{ $data['top']['mission_statement'] }}</h1>
+        </div>
+        <div class="container">
+            <div class="images">
+                <img src="{{ $data['top']['image_1']['sizes']['large'] }}" />
+                <img src="{{ $data['top']['image_2']['sizes']['large'] }}" />
             </div>
+        </div>
+    </section>
+    
+    <section id="content">
+        <div class="container">
+            @php the_content() @endphp
+        </div>
+    </section>
+    
+    <section id="donate">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ $data['donate']['image']['sizes']['large'] }}" />
+                </div>
             <div class="col-md-6">
                 <h2>{{ $data['donate']['title'] }}</h2>
                 <p>{{ $data['donate']['text'] }}</p>
@@ -30,14 +36,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                Cat
-                <h2>Title</h2>
-                <p>Excerpt</p>
+                @php 
+                global $post;
+                $post = $data['feature'];
+                setup_postdata($post);
+                @endphp
+                <div class="category">{{ get_the_category()[0]->name }}</div>
+                <h2>{{ the_title() }}</h2>
+                {!! the_excerpt() !!}
                 <a class="button" href="link">Learn More</a>
             </div>
             <div class="col-md-6">
-                Image
+                {!! the_post_thumbnail('large') !!}
             </div>
+            @php wp_reset_postdata() @endphp
         </div>
     </div>
 </section>
