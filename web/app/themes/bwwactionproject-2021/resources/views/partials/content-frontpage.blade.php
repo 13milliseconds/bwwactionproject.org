@@ -59,7 +59,7 @@
     <div class="container">
         <h2>{{ $data['newsletter']['title'] }}</h2>
         <p>{{ $data['newsletter']['text'] }}</p>
-        Form
+        @include('partials.mailchimp-form')
     </div>
 </section>
 

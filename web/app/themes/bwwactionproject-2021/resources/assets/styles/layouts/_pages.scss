@@ -192,6 +192,41 @@
             .container{
                 max-width: 500px;
             }
+
+            #mc_embed_signup{
+                margin-top: $grid-gutter / 2;
+
+                form{
+                    padding: 0;
+                }
+
+                .mc-field-group{
+                    width: 100%;
+                }
+
+                input[type="email"]{
+                    width: 100%;
+                    border: 0;
+                    border-radius: 0;
+                    text-align: center;
+                    padding: .8em;
+                    background-color: theme-color(white);
+                    color: theme-color(blue);
+                    
+                    &::placeholder{
+                        color: #ccc;
+                    }
+                }
+
+                input[type="submit"]{
+                    background: theme-color(blue);
+                    border-radius: 2em;
+                    text-transform: uppercase;
+                    width: 100%;
+                    padding: .5em;
+                    height: auto;
+                }
+            }
         }
 
         #latest{
