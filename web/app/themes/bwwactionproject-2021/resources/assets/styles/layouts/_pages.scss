@@ -185,7 +185,7 @@
             }
         }
         
-        #newsletter{
+        #letter{
             background-color: theme-color(gold);
             text-align: center;
 
@@ -294,27 +294,30 @@
             }
         }
 
+        #feature{
+            .campaign-block{
+                    .wrap{
+                        background: theme-color(blue);
+                        color: theme-color(white);
+                    }
+    
+                    @include media-breakpoint-up(md){
+                        .image{
+                            height: 500px;
+                            
+                            img{
+                                height: 500px;
+                            }
+                        }
+                    }
+            }
+        }
+
         .campaign-block{
-            @extend .col-md-6;
             margin-bottom: $grid-gutter;
 
             .wrap{
                 background: white;
-            }
-            
-            &:first-child{
-                @extend .col-md-12;
-
-                .wrap{
-                    background: theme-color(blue);
-                    color: theme-color(white);
-                }
-
-                @include media-breakpoint-up(md){
-                    .image{
-                        height: 500px;
-                    }
-                }
             }
 
             .text{
@@ -332,12 +335,12 @@
             }
 
             @include media-breakpoint-up(md){
-                .text{
-                    padding: $grid-gutter;
-                }
-
                 .image{
                     height: 300px;
+                    
+                    img{
+                        height: 300px;
+                    }
                 }
             }
         }

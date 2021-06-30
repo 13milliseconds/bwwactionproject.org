@@ -1,7 +1,7 @@
 <div class="campaign-block">
     <div class="wrap">
         <div class="image">
-            {!! the_post_thumbnail('medium') !!}
+            {!! the_post_thumbnail('large') !!}
         </div>
         <div class="text">
             <h3>{{ the_title() }}</h3>

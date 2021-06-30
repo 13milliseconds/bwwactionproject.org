@@ -7,11 +7,21 @@
 
 <section id="campaigns">
     <div class="container">
+        <div class="container">
+            <div id="feature">
+                @php global $post @endphp
+                @php $post = $data['featured_campaign'] @endphp
+                @php setup_postdata($post) @endphp
+                @include('partials.campaign-block')
+                @php wp_reset_postdata() @endphp
+            </div>
+
         <div class="row">
-        @php global $post @endphp
-        @foreach ($campaigns as $post)
+            @foreach ($campaigns as $post)
             @php setup_postdata($post) @endphp
-            @include('partials.campaign-block')
+            <div class="col-md-6">
+                @include('partials.campaign-block')
+            </div>
             @php wp_reset_postdata() @endphp
         @endforeach
         </div>
