@@ -1,6 +1,6 @@
 <section id="top">
     <div class="container">
-        <h1>Black Women For Wellness <strong>Action Project</strong></h1>
+        {{-- <h1>Black Women For Wellness <strong>Action Project</strong></h1> --}}
         <div class="wrap">
             <div class="text">
                 {!! $data['header']['text'] !!}

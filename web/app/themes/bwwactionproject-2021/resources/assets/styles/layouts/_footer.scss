@@ -6,7 +6,11 @@ footer.content-info{
     position: relative;
 
     img{
-        width: 200px;
+        width: 150px;
+
+        @include media-breakpoint-up(md){
+            width: 200px;
+        }
     }
 
     .copyright{

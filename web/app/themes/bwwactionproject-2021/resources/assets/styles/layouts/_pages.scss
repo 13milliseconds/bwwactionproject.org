@@ -207,7 +207,7 @@
                     height: 200px;
                     overflow: hidden;
                     margin-bottom: 10px;
-                    background: theme-color(white);
+                    background: white;
 
                     img{
                         width: 100%;
@@ -314,18 +314,25 @@
     &.policy{
         background-color: white;
 
-        h3{
-            font-family: $maison;
-            text-transform: none;
-            font-size: 1.2em;
-        }
-
         #top{
             background-color: theme-color(green);
             color: theme-color(white);
 
             .row{
                 align-items: center;
+                flex-flow: column-reverse;
+
+                img{
+                    margin-bottom: $grid-gutter / 2;
+                }
+
+                @include media-breakpoint-up(md){
+                    flex-flow: row;
+
+                    img{
+                        margin-bottom: 0;
+                    }
+                }
             }
 
             h1{
@@ -441,9 +448,11 @@
                         &:first-child{
                             @extend h1;
                             text-align: left;
-                            color: theme-color(green);
+                            background-color: theme-color(green);
+                            color: theme-color(white);
                             margin-bottom: 1em;
                             font-size: 1.8em;
+                            padding: 10px;
                         }
                     }
                 }
@@ -474,8 +483,6 @@
                             
                             &:first-child{
                                 padding: $grid-gutter / 2;
-                                background-color: theme-color(green);
-                                color: theme-color(white);
                                 font-size: 3em;
                             }
                         }
@@ -492,6 +499,14 @@
         }
 
         #content{
+            .row{
+                flex-flow: column-reverse;
+                
+                @include media-breakpoint-up(md){
+                    flex-flow: row;
+                }
+            }
+
             img{
                 margin-bottom: $grid-gutter;
             }
@@ -505,6 +520,22 @@
 
             h1{
                 color: theme-color(gold);
+            }
+
+            .row{
+                flex-flow: column-reverse;
+
+                img{
+                    margin-bottom: $grid-gutter / 2;
+                }
+
+                @include media-breakpoint-up(md){
+                    flex-flow: row;
+
+                    img{
+                        margin-bottom: 0;
+                    }
+                }
             }
         }
 
@@ -526,6 +557,10 @@
 
                 .image{
                     margin-bottom: $grid-gutter / 2;
+
+                    img{
+                        max-width: 150px;
+                    }
                 }
 
                 @include media-breakpoint-up(md){

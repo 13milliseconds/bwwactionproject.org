@@ -1,8 +1,8 @@
 <div class="bill-block">
     <header>
         <div class="text">
-            <p>{{ the_title() }}</p>
-            <h3>{{ the_field('full_title') }}</h3>
+            <p>{{ the_field('bill_title') }}</p>
+            <h3>{{ the_title() }}</h3>
         </div>
         <div class="toggle"></div>
     </header>
