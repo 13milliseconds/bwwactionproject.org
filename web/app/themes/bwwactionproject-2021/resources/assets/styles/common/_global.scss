@@ -44,6 +44,7 @@ a{
 
     &.button,
     &.wp-block-button__link{
+        display: inline-block;
         background-color: theme-color(gold);
         color: theme-color(white);
         font-size: .8em;

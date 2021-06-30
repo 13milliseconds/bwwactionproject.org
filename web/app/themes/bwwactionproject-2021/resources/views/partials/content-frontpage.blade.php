@@ -44,7 +44,7 @@
                 <div class="category">{{ get_the_category()[0]->name }}</div>
                 <h2>{{ the_title() }}</h2>
                 {!! the_excerpt() !!}
-                <a class="button" href="link">Learn More</a>
+                <a class="button" href="{{ the_permalink() }}">Learn More</a>
             </div>
             <div class="col-md-6">
                 {!! the_post_thumbnail('large') !!}

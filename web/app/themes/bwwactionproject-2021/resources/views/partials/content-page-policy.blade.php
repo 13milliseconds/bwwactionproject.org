@@ -11,6 +11,24 @@
     </div>
 </section>
 
+
+{{-- Agenda --}}
+<section id="agenda">
+    <div class="container">
+        <h2>{{ $data['agenda']['title'] }}</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <a class="button" target="_blank" href="{{ $data['agenda']['pdf'] }}">Read More</a>
+            </div>
+            <div class="col-md-8">
+                {!! $data['agenda']['text'] !!}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{-- Bills --}}
 <section id="bills">
     <div class="container">
         <h2>{{ $data['bills']['title'] }}</h2>

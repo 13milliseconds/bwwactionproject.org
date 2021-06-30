@@ -21,8 +21,7 @@ class FrontPage extends Controller
     public function posts(){
         $args = array(
             'post_type' => 'post',
-            'posts_per_page' => 3,
-	    	'category__not_in' => array(4)
+            'posts_per_page' => 3
 	    );
 
 	    $the_query = new WP_Query( $args );

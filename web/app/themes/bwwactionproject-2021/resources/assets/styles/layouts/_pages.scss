@@ -15,6 +15,12 @@
         }
     }
 
+    .category{
+        text-transform: uppercase;
+        color: theme-color(green);
+        font-size: .9em;
+    }
+
     &.home{
 
         #top{
@@ -148,12 +154,6 @@
                 align-items: center;
             }
 
-            .category{
-                text-transform: uppercase;
-                color: theme-color(green);
-                font-size: .9em;
-            }
-
             img{
                 box-shadow: -10px 10px 0px 0px theme-color(blue);
             }
@@ -206,7 +206,7 @@
                 .image{
                     height: 200px;
                     overflow: hidden;
-                    margin-bottom: 10px;
+                    margin-bottom: 15px;
                     background: white;
 
                     img{
@@ -217,9 +217,7 @@
                 }
 
                 .category{
-                    font-size: .9em;
-                    text-transform: uppercase;
-                    margin-bottom: 10px;
+                    margin-bottom: 5px;
                 }
 
                 h3{
@@ -337,6 +335,16 @@
 
             h1{
                 color: theme-color(blue);
+            }
+        }
+
+        #agenda{
+            padding-bottom: 0;
+
+            h2{
+                padding-bottom: $grid-gutter / 2;
+                margin-bottom: $grid-gutter / 2;
+                border-bottom: 1px solid theme-color(blue);
             }
         }
 

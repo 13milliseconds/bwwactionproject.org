@@ -12,9 +12,30 @@
     </div>
 </section>
 
+
+{{-- Ballot Guides --}}
+<section id="ballotGuides">
+    <div class="container">
+        <h2>{{ $data['ballot_guides']['title'] }}</h2>
+        <p>{{ $data['ballot_guides']['text'] }}</p>
+        <div class="guides row">
+            @foreach ($data['ballot_guides']['guides'] as $guide)
+                <div class="guide">
+                    <div class="year">{{ $guide['year'] }}</div>
+                    <a href="{{ $guide['pdf'] }}" target="_blank">
+                        <img src="{{ $guide['thumbnail']['sizes']['medium'] }}" />
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
+{{-- Endorsements --}}
 <section id="endorsements">
     <div class="container">
-        <h2>Endorsements</h2>
+        <h2>{{ $data['endorsements']['title'] }}</h2>
         <div class="row">
             <div class="col-md-4 intro">
                 {!! $data['endorsements']['introduction'] !!}
@@ -39,20 +60,26 @@
     </div>
 </section>
 
-
-<section id="ballotGuides">
+@if($data['feature'])
+<section id="feature">
     <div class="container">
-        <h2>{{ $data['ballot_guides']['title'] }}</h2>
-        <p>{{ $data['ballot_guides']['text'] }}</p>
-        <div class="guides row">
-            @foreach ($data['ballot_guides']['guides'] as $guide)
-                <div class="guide">
-                    <div class="year">{{ $guide['year'] }}</div>
-                    <a href="{{ $guide['pdf'] }}" target="_blank">
-                        <img src="{{ $guide['thumbnail']['sizes']['medium'] }}" />
-                    </a>
-                </div>
-            @endforeach
+        <div class="row">
+            <div class="col-md-6 text">
+                @php 
+                global $post;
+                $post = $data['feature'];
+                setup_postdata($post);
+                @endphp
+                <div class="category">{{ get_the_category()[0]->name }}</div>
+                <h2>{{ the_title() }}</h2>
+                {!! the_excerpt() !!}
+                <a class="button" href="{{ the_permalink() }}">Learn More</a>
+            </div>
+            <div class="col-md-6">
+                {!! the_post_thumbnail('large') !!}
+            </div>
+            @php wp_reset_postdata() @endphp
         </div>
     </div>
 </section>
+@endif
