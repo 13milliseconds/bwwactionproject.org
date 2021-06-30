@@ -19,7 +19,7 @@
         </div>
         <div class="text">
             <div class="category">{{ $category->name }}</div>
-            <h3><a href="{{ $link }}">{{ the_title() }}</a></h3>
+            <h3><a href="{{ $link }}" @if($category->term_id == 5) target="_blank" @endif>{{ the_title() }}</a></h3>
             {{ the_excerpt() }}
             <a href="{{ $link }}" class="button" @if($category->term_id == 5) target="_blank" @endif>{{ $buttonText }}</a>
         </div>
