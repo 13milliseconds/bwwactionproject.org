@@ -26,7 +26,7 @@
         #top{
             background-color: theme-color(green);
             padding-bottom: 0;
-            height: 90vh;
+            height: 500px;
             display: flex;
             align-items: flex-end;
             overflow: hidden;
@@ -37,8 +37,7 @@
                 position: absolute;
                 z-index: 2;
                 left: 0;
-                top: 50%;
-                transform: translateY(-50%);
+                top: $grid-gutter * 2;
 
                 h1{
                     background-color: theme-color(gold);
@@ -54,15 +53,16 @@
                 img{
                     z-index: 0;
                     position: absolute;
-                    top: 100px;
-                    left: 5%;
-                    width: 90%;
+                    bottom: 100px;
+                    left: 10px;
+                    width: 60%;
                     
                     &:last-child{
                         top: auto;
                         bottom: 0;
-                        left: 10%;
-                        width: 60%;
+                        left: auto;
+                        right: 10px;
+                        width: 50%;
                         transform: translateY(10px);
                     }
                 }
@@ -74,7 +74,7 @@
 
                 .text{
                     padding: $grid-gutter;
-                    left: 10%;
+                    left: 15%;
                     max-width: 40%;
                     top: 150px;
                     transform: unset;
@@ -86,7 +86,7 @@
 
                 .images{
                     position: relative;
-                    max-width: 700px;
+                    max-width: 800px;
                     margin: auto;
                     
                     img{
@@ -97,7 +97,6 @@
                         transform: translateY($grid-gutter);
                         
                         &:last-child{
-                            left: auto;
                             right: 0;
                             width: 55%;
                             transform: translateY(10px);
@@ -152,6 +151,11 @@
         #feature{
             .row{
                 align-items: center;
+                flex-flow: column-reverse;
+                
+                @include media-breakpoint-up(md){
+                    flex-flow: row;
+                }
             }
 
             img{
@@ -185,7 +189,7 @@
             }
         }
         
-        #letter{
+        #newsletter{
             background-color: theme-color(gold);
             text-align: center;
 
@@ -278,8 +282,16 @@
         #top{
             background-color: theme-color(gold);
             text-align: center;
-            padding-bottom: 200px;
+            padding-bottom: 150px;
             margin-bottom: -100px;
+            
+            @include media-breakpoint-up(md){
+                padding-bottom: 200px;
+            }
+
+            p:last-child{
+                margin-bottom: 0;
+            }
 
             .container{
                 max-width: 700px;
@@ -353,9 +365,10 @@
         #top{
             background-color: theme-color(green);
             color: theme-color(white);
+            padding-bottom: 0;
 
             .row{
-                align-items: center;
+                align-items: flex-end;
                 flex-flow: column-reverse;
 
                 img{
@@ -364,6 +377,10 @@
 
                 @include media-breakpoint-up(md){
                     flex-flow: row;
+
+                    p:last-child{
+                        margin-bottom: $grid-gutter;
+                    }
 
                     img{
                         margin-bottom: 0;
@@ -383,6 +400,10 @@
                 padding-bottom: $grid-gutter / 2;
                 margin-bottom: $grid-gutter / 2;
                 border-bottom: 1px solid theme-color(blue);
+            }
+
+            .row{
+                flex-flow: column-reverse;
             }
         }
 
@@ -633,6 +654,16 @@
                     font-weight: 600;
                     font-size: 1.2em;
                     padding-bottom: 5px;
+                }
+            }
+        }
+
+        #feature{
+            .button{
+                margin-bottom: $grid-gutter / 2;
+
+                @include media-breakpoint-up(md){
+                    margin-bottom: 0;
                 }
             }
         }
