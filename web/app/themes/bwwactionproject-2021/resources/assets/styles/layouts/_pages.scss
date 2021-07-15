@@ -394,7 +394,7 @@
         }
 
         #agenda{
-            padding-bottom: 0;
+            padding-top: 0;
 
             h2{
                 padding-bottom: $grid-gutter / 2;
@@ -484,6 +484,10 @@
                 border-bottom: 1px solid theme-color(blue);
                 padding: $grid-gutter 0;
                 margin-bottom: $grid-gutter;
+
+                h3{
+                    margin-bottom: $grid-gutter / 2;
+                }
 
                 &:last-child{
                     border-bottom: 0;

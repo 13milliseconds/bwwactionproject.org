@@ -12,22 +12,6 @@
 </section>
 
 
-{{-- Agenda --}}
-<section id="agenda">
-    <div class="container">
-        <h2>{{ $data['agenda']['title'] }}</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <a class="button" target="_blank" href="{{ $data['agenda']['pdf'] }}">Read More</a>
-            </div>
-            <div class="col-md-8">
-                {!! $data['agenda']['text'] !!}
-            </div>
-        </div>
-    </div>
-</section>
-
-
 {{-- Bills --}}
 <section id="bills">
     <div class="container">
@@ -53,8 +37,12 @@
                     <div class="col-md-12">
                         <h3>{{ $bill['title'] }}</h3>
                     </div>
-                    <div class="col-md-6">
-
+                    <div class="col-md-6 media">
+                        @if($bill['photo_or_video'] == 'photo')
+                            <img src="{{ $bill['photo']['sizes']['large'] }}" />
+                        @else
+                            {!! $bill['video'] !!}
+                        @endif
                     </div>
                     <div class="col-md-6">
                         {!! $bill['text'] !!}
@@ -62,5 +50,20 @@
                 </div>
             </div>
         @endforeach
+    </div>
+</section>
+
+{{-- Agenda --}}
+<section id="agenda">
+    <div class="container">
+        <h2>{{ $data['agenda']['title'] }}</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <a class="button" target="_blank" href="{{ $data['agenda']['pdf'] }}">Read More</a>
+            </div>
+            <div class="col-md-8">
+                {!! $data['agenda']['text'] !!}
+            </div>
+        </div>
     </div>
 </section>

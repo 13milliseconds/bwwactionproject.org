@@ -25,7 +25,7 @@
             <div class="col-md-6 text">
                 <h2>{{ $data['donate']['title'] }}</h2>
                 <p>{{ $data['donate']['text'] }}</p>
-                <a class="button" href="/donate">{{ $data['donate']['button_text'] }}</a>
+                <a class="button" href="{{ $data['donate']['donate_link'] }}" target="_blank">{{ $data['donate']['button_text'] }}</a>
             </div>
         </div>
     </div>
