@@ -12,6 +12,10 @@
     </div>
 </section>
 
+{{-- Endorsements --}}
+@php $endorsements = $data['current_endorsements'] @endphp
+@include('partials.section-endorsements')
+
 
 {{-- Ballot Guides --}}
 <section id="ballotGuides">
@@ -33,32 +37,9 @@
 
 
 {{-- Endorsements --}}
-<section id="endorsements">
-    <div class="container">
-        <h2>{{ $data['endorsements']['title'] }}</h2>
-        <div class="row">
-            <div class="col-md-4 intro">
-                {!! $data['endorsements']['introduction'] !!}
-            </div>
-            <div class="col-md-8">
-                @foreach ($data['endorsements']['candidates'] as $item)
-                    <div class="candidate">
-                        <div class="image">
-                            <img src="{{ $item['image']['sizes']['medium'] }}" />
-                        </div>
-                        <div class="text">
-                            <h3>{{ $item['name'] }}</h3>
-                            {!! $item['description'] !!}
-                            @if($item['link'])
-                            <a class="button" target="_blank" href="{{ $item['link'] }}">Learn More</a>
-                            @endif
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-</section>
+@php $endorsements = $data['past_endorsements'] @endphp
+@include('partials.section-endorsements')
+
 
 @if($data['feature'])
 <section id="feature">

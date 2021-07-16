@@ -42,7 +42,7 @@
                 h1{
                     background-color: theme-color(gold);
                     color: theme-color(white);
-                    padding: 2px 20px;
+                    padding: 2px 0px;
                     display: inline;
                     line-height: 1.3em;
                     font-size: 2.1em;
@@ -618,7 +618,7 @@
             }
         }
 
-        #endorsements{
+        .endorsements{
             .intro{
                 margin-bottom: $grid-gutter;
             }
