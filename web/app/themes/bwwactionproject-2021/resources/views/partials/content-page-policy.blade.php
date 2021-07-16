@@ -67,3 +67,6 @@
         </div>
     </div>
 </section>
+
+{{-- Featured Campaign --}}
+@include('section-featured-campaign')

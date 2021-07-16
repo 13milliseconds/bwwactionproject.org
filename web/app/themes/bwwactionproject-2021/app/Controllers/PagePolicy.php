@@ -23,6 +23,7 @@ class PagePolicy extends Controller
         $data['federal_bills'] = get_field('federal_bills');
         $data['bills'] = get_field('bills');
         $data['agenda'] = get_field('agenda');
+        $data['featured_campaign'] = get_field('featured_campaign');
 
         return $data;
     }

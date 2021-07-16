@@ -14,7 +14,7 @@ class PageVote extends Controller
         $data['current_endorsements'] = get_field('current_endorsements');
         $data['past_endorsements'] = get_field('past_endorsements');
         $data['ballot_guides'] = get_field('ballot_guides');
-        $data['feature'] = get_field('featured_campaign');
+        $data['featured_campaign'] = get_field('featured_campaign');
 
         return $data;
     }
