@@ -7,6 +7,7 @@
                 {!! $endorsements['introduction'] !!}
             </div>
             <div class="col-md-8">
+                @if($endorsements['candidates'])
                 @foreach ($endorsements['candidates'] as $item)
                     <div class="candidate">
                         <div class="image">
@@ -21,6 +22,7 @@
                         </div>
                     </div>
                 @endforeach
+                @endif
             </div>
         </div>
     </div>
