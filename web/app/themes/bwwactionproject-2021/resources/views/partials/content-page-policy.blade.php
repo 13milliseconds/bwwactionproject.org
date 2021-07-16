@@ -69,4 +69,4 @@
 </section>
 
 {{-- Featured Campaign --}}
-@include('section-featured-campaign')
+@include('partials.section-featured-campaign')

@@ -672,4 +672,28 @@
             }
         }
     }
+
+    &.resources{
+        #top{
+            background-color: theme-color(gold);
+        }
+
+        #resources{
+            .container{
+                columns: 2;
+
+                .category-wrap{
+                    white-space: nowrap;
+                }
+            }
+
+            ul{
+                padding-left: 0;
+                
+                li{
+                    list-style: none;
+                }
+            }
+        }
+    }
 }
