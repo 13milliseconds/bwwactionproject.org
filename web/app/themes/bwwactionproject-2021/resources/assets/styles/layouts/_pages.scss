@@ -222,6 +222,12 @@
                     }
                 }
 
+                .mce_inline_error{
+                    width: 100%;
+                    text-align: center;
+                    background-color: rgba(white, .5);
+                }
+
                 input[type="submit"]{
                     background: theme-color(blue);
                     border-radius: 2em;
@@ -229,6 +235,16 @@
                     width: 100%;
                     padding: .5em;
                     height: auto;
+                }
+
+                #mce-error-response,
+                #mce-success-response{
+                    color: theme-color(white);
+                    font-weight: 400;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0 0 10px;
                 }
             }
         }
@@ -385,6 +401,10 @@
                     img{
                         margin-bottom: 0;
                     }
+
+                    .text{
+                        padding-right: $grid-gutter;
+                    }
                 }
             }
 
@@ -483,7 +503,6 @@
             .fed-bill-block{
                 border-bottom: 1px solid theme-color(blue);
                 padding: $grid-gutter 0;
-                margin-bottom: $grid-gutter;
 
                 h3{
                     margin-bottom: $grid-gutter / 2;
@@ -491,6 +510,7 @@
 
                 &:last-child{
                     border-bottom: 0;
+                    padding-bottom: 0;
                 }
             }
         }
@@ -606,6 +626,10 @@
                     img{
                         margin-bottom: 0;
                     }
+
+                    .text{
+                        padding-right: $grid-gutter;
+                    }
                 }
             }
         }
@@ -619,8 +643,13 @@
         }
 
         .endorsements{
+            h2{
+                margin-bottom: $grid-gutter;
+            }
+
             .intro{
                 margin-bottom: $grid-gutter;
+                padding-right: $grid-gutter;
             }
 
             .candidate{
@@ -632,11 +661,15 @@
                     img{
                         max-width: 150px;
                     }
+
+                }
+                
+                &:last-child{
+                    margin-bottom: 0;
                 }
 
                 @include media-breakpoint-up(md){
                     display: flex;
-                    padding-left: $grid-gutter;
 
                     .image{
                         flex: 0 0 150px;

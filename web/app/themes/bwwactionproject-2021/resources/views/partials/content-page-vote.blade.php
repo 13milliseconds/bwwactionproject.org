@@ -1,7 +1,7 @@
 <section id="top">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 text">
                 <h1>{{ the_title() }}</h1>
                 {!! the_content() !!}
             </div>

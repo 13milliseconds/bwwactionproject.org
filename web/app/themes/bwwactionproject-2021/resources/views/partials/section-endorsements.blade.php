@@ -3,15 +3,17 @@
     <div class="container">
         <h2>{{ $endorsements['title'] }}</h2>
         <div class="row">
-            <div class="col-md-4 intro">
+            <div class="col-md-6 intro">
                 {!! $endorsements['introduction'] !!}
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 @if($endorsements['candidates'])
                 @foreach ($endorsements['candidates'] as $item)
                     <div class="candidate">
                         <div class="image">
-                            <img src="{{ $item['image']['sizes']['medium'] }}" />
+                            @if($item['image'])
+                                <img src="{{ $item['image']['sizes']['medium'] }}" />
+                            @endif
                         </div>
                         <div class="text">
                             <h3>{{ $item['name'] }}</h3>

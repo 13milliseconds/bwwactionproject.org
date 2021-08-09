@@ -1,11 +1,11 @@
 <section id="top">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 text">
                 <h1>{{ the_title() }}</h1>
                 @php the_content() @endphp
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 image">
                 {!! the_post_thumbnail('large') !!}
             </div>
     </div>
